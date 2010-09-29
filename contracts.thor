@@ -35,7 +35,7 @@ class Contract < Thor
     if git_status.empty?
       puts "Contract at #{path} does not appear to have changed"
     else
-      message = "Signing contract revision #{revision(path)} for #{path.split('/').last}"
+      message = "Signed contract revision #{revision(path)} for #{path.split('/').last}"
       puts message
       `git add #{path}`
       `git commit -m #{message.inspect}`
